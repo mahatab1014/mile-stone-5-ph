@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class VS ID</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+</head>
+<body id="body">
+
+    <header>
+        <h2 class="logo"><a href="#">Doma DOM Mast Qalandar</a></h2>
+    </header>
+
+    <main>
+
+        <section>
+            <h1 id="goru-sagol">Goru Sagol</h1>
+            <ul>
+                <li>Goru</li>
+                <li>Sagol</li>
+                <li>Vera</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Folll Mul</h1>
+            <ul>
+                <li>Kola</li>
+                <li>Kathal</li>
+                <li>Habi</li>
+                <li>Jabi</li>
+            </ul>
+        </section>
+
+        <section class="water">
+            <h1>Khal Bill</h1>
+            <ul>
+                <li class="importent-list">Pokur</li>
+                <li class="importent-list">Nodi</li>
+                <li class="importent-list">MaGi (think feel free) </li>
+                <li class="importent-list">Nouka</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+
+        // Get HTML Elements By Class Name
+        // document.getElementsByClassName('importent-list');
+        
+        // Get HTML Element By ID
+        // document.getElementById('body');
+        // document.getElementById('goru-sagol');
+
+        const impList = document.getElementsByClassName('importent-list');
+        for (const list of impList) {
+            console.log(list.innerText);
+        }
+
+        // Query Selector
+        const quList = document.querySelector('.water ul li');
+        const quListAll = document.querySelectorAll('.water ul li');
+        
+    </script>
+
+    <!-- <script src="javascript/main.js"></script> -->
+</body>
+</html>

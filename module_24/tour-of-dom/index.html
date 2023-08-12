@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of DOM</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <header>
+        <h2 class="logo"><a href="#">WELCOME TO OUR DOM DOMA DOM</a></h2>
+    </header>
+
+    <main>
+        <h1>LET'S DIVE ON THE DOM</h1>
+        <ul>
+            <li>Goru</li>
+            <li>Sagol</li>
+            <li>Vera</li>
+            <li>Doma DOM Mast Qalandar</li>
+        </ul>
+        <ul>
+            <li>Apple</li>
+            <li>Bananananan</li>
+            <li>Kola</li>
+            <li>Doma DOM Mast Qalandar</li>
+        </ul>
+    </main>
+
+
+    
+
+
+    <script>
+        const liCollactions = document.getElementsByTagName('li');
+        for (const li of liCollactions) {
+            console.log(li.innerText);
+        }
+    </script>
+
+    <!-- <script src="javascript/main.js"></script> -->
+</body>
+</html>
