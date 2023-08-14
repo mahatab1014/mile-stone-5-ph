@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            /* background-color: chartreuse; */
+            /* text-align: center; */
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        li{
+            list-style-position: inside;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+</head>
+<body>
+    
+    <h2>Explore Event Delegate</h2>
+
+    <section>
+
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ipsum, quae aut!</li>
+            <li class="item">Nobis, consequatur modi.</li>
+            <li class="item">Voluptatem, exercitationem natus.</li>
+            <li class="item">Illo, deleniti eligendi?</li>
+            <li class="item">Quae, officia mollitia.</li>
+            <li class="item">Minus, ab cupiditate?</li>
+            <li class="item">Nesciunt, architecto ab?</li>
+            <li class="item">Iure, ullam et.</li>
+            <li class="item">Obcaecati, quis pariatur.</li>
+        </ul>
+        <button id="new-item" onclick="">ADD ITEM</button>
+
+    </section>
+
+
+    <script>
+        /*
+        const items = document.getElementsByClassName('item');
+        for (const item of items) {
+            item.addEventListener('click', function(event) {
+                console.log(event.target.innerText);
+                // console.log(event.target.parentNode);
+                event.target.parentNode.removeChild(event.target);
+            });
+        };
+        */
+       const itemContainer = document.getElementById('list-container');
+       itemContainer.addEventListener('click', function(event) {
+            event.target.parentNode.removeChild(event.target)
+       })
+
+
+        document.getElementById('new-item').addEventListener('click', function() {
+            const listContainer = document.getElementById('list-container');
+            const addList = document.createElement('li');
+            addList.innerText = 'Brand NEW ITEM Song ';
+            addList.classList.add('item')
+            listContainer.appendChild(addList);
+
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+
+    <style>
+        *{
+            font-family: sans-serif;
+            /* background-color: chartreuse; */
+            text-align: center;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        ul{
+            width: 20%;
+            margin: auto;
+        }
+        li{
+            list-style-position: inside;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+</head>
+<body id="body">
+
+
+    <section id="section">
+        <h1>Event bubble and Stop propagating</h1>
+
+        <ul id="ul">
+            <li id="li1">Vabi</li>
+            <li id="li2">Bhabhi</li>
+            <li id="li3">Vai</li>
+            <li id="li4">Bhai</li>
+        </ul>
+
+    </section>
+
+
+    <script>
+
+        document.getElementById('li3').addEventListener('click', function(event){
+            console.log('Click -> Vai -- 3')
+            // event.stopPropagation();
+            event.stopImmediatePropagation();
+        });
+        document.getElementById('li3').addEventListener('click', function(event){
+            console.log('Click -> Vai -- 3.1')
+            // event.stopPropagation();
+        });
+        document.getElementById('li3').addEventListener('click', function(event){
+            console.log('Click -> Vai -- 3.2')
+            // event.stopPropagation();
+        });
+        document.getElementById('li3').addEventListener('click', function(event){
+            console.log('Click -> Vai -- 3.3')
+            // event.stopPropagation();
+        });
+
+
+
+        document.getElementById('ul').addEventListener('click', function(){
+            console.log('Click -> ul > li')
+        });
+        document.getElementById('section').addEventListener('click', function(){
+            console.log('Click -> Section > ul > li')
+        });
+        document.getElementById('body').addEventListener('click', function(){
+            console.log('Click -> Body > Section > ul > li')
+        });
+
+    </script>
+</body>
+</html>

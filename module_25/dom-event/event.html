@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js DOM Summary</title>
+    <!-- CSS only -->
+    <style>
+        section{
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <h1>Final DOM Event Handlers</h1>
+        <h2 id="helloBD">Hello Bangladesh!</h2>
+        <button onclick="handleOnClick()">Change TEXT</button>
+    </section>
+
+
+    <!-- -- -->
+    <section>
+        <h1>Change your email address</h1>
+        <h4>Name : <span>MahTab Hossain</span></h4>
+        <h4>E-mail : <span id="email">example@mail.com</span></h4>
+
+        <div>
+            <input type="text" id="new-email">
+            <button onclick="updateEmail()">Update</button>
+        </div>
+    </section>
+
+
+
+    <script>
+
+        function handleOnClick() {
+            const helloBD = document.getElementById('helloBD');
+            helloBD.innerText = "Hello World!"
+        }
+        // Name and Email Update
+        function updateEmail() {
+            const newEmail = document.getElementById('new-email');
+            const currentEmail = document.getElementById('email');
+            if (newEmail.value.includes('@')) {
+                currentEmail.innerText = newEmail.value;
+            } else {
+                currentEmail.innerText = "Please give me the currect email address";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

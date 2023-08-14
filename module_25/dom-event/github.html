@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+
+    <style>
+        *{
+            font-family: sans-serif;
+            /* background-color: chartreuse; */
+            text-align: center;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        button, input{
+            padding: 10px;
+            border-radius: 50px;
+            border-width: 5px;
+            cursor: pointer;
+        }
+        input{
+            padding: 10px;
+            border-radius: 50px;
+            border-width: 1px;
+            outline: none;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <section>
+        <h1>GitHub Secret Key</h1>
+        <h2 id="key">K23S-WK3S-23LL-2LD4</h2>
+
+        
+        <div>
+            <input type="text" id="delete-confirm" placeholder="type delete">
+            <button id="delete-btn" disabled>Delete Secret Key</button>
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+
+        document.getElementById('delete-confirm').addEventListener('keyup', function(text){
+            const deleteText = text.target.value;
+            // deleteText.includes('delete')
+            if (deleteText === 'delete') {
+                document.getElementById('delete-btn').disabled = false;
+            }else{
+                document.getElementById('delete-btn').disabled = true;
+            }
+        });
+
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            document.getElementById('key').style.display = 'none';
+            document.getElementById('delete-confirm').disabled = true;
+            document.getElementById('delete-confirm').value = '';            
+            document.getElementById('delete-confirm').placeholder = 'key deleted';
+        });
+
+    </script>
+</body>
+</html>

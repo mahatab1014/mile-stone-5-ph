@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE EVENTS</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            /* background-color: chartreuse; */
+            text-align: center;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+</head>
+ <body id="body">
+    
+
+    <section>
+        <!-- header -->
+        <h2>Explore More EVENTS</h2>
+        <button id="events-1">Mouse Events</button>
+        <input type="text" name="" id="events-2">
+    </section>
+
+
+    <script>
+        // Event 1
+        document.getElementById('events-1').addEventListener('mouseenter', function(){
+            document.body.style.background = 'purple';
+        });
+        document.getElementById('events-1').addEventListener('mouseleave', function(){
+            document.body.style.background = 'pink';
+        });
+
+        // Event 2
+        document.getElementById('events-2').addEventListener('focus', function(){
+            document.body.style.background = 'white';
+            // console.log('Input focus')
+        });
+        document.getElementById('events-2').addEventListener('blur', function(){
+            document.body.style.background = 'yellow';
+            // console.log('Input focus blur')
+        });
+        document.getElementById('events-2').addEventListener('keydown', function(event){
+            document.body.style.background = 'green';
+            // console.log('Input keydown');
+            // console.log(event);
+            // console.log(event.target.value);
+        });
+        document.getElementById('events-2').addEventListener('keypress', function(event){
+            // document.body.style.background = 'chartreuse';
+            // console.log('Input key press');
+            // console.log(event);
+            console.log(event.target.value);
+        });
+    </script>
+ </body>
+ </html>
