@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+    <!-- Tailwind & DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    
+
+    <main>
+
+        <section class="hero min-h-screen" style="background-image: url(https://source.unsplash.com/random/1920x1080);">
+            <div class="hero-overlay bg-opacity-50"></div>
+            <div class="hero-content text-center text-neutral-content">
+    
+              <div class="space-y-10">
+    
+                <h1 class="text-5xl text-amber-400 font-extrabold">Music Player</h1>
+
+                <div id="player" class="backdrop-blur space-y-5 p-28 font-semibold rounded-lg shadow-2xl">
+    
+                    <div>
+                        <h2 id="track-title" class="text-3xl animate-bounce"></h2>
+                    </div>
+    
+                    <audio class="drop-shadow-2xl" id="music-player" controls>
+                        <source src="music/lofi-chill-medium-version-159456.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <div id="control-panel">
+                        <button class="btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="btn" id="play"><i class="fa-solid fa-play"></i></button>
+                        <button class="btn" id="pause"><i class="fa-solid fa-pause"></i></button>
+                        <button class="btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                </div>
+    
+              </div>
+    
+            </div>
+          </section>
+
+
+
+    </main>
+
+
+
+
+    <script src="https://kit.fontawesome.com/fbcff7765f.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
