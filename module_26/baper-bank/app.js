@@ -1,6 +1,6 @@
 const viewBalance = document.getElementById('current-balance');
 
-document.getElementById('money-input-btn').addEventListener('click', function(event){
+document.getElementById('money-input-btn').addEventListener('click', function(){
     // Deposit Money Input
     const moneyDeposit = document.getElementById('money-input');
     // Deposit Money VIEW
