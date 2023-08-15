@@ -26,7 +26,7 @@ document.getElementById('money-output-btn').addEventListener('click', function()
     // Total Withdraw Money Display
     const viewWithdrawMoney = document.getElementById('withdraw-money');
 
-    if (moneyWithdraw.value <= 0) {
+    if (moneyWithdraw.value <= 10) {
         withdrawError.showModal();
     } else {
         if (parseFloat(viewBalance.innerText) >= parseFloat(moneyWithdraw.value))  {
