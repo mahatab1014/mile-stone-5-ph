@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper Bank</title>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            font-family: 'Noto Sans', sans-serif;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+    
+
+    <main>
+
+
+        <section class="w-[90%] m-auto px-5 md:px-20 lg:px-36 space-y-10" id="baper-bank">
+
+            <div class="title text-center mt-5 md:mt-10">
+                <h1 class="text-4xl lg:text-5xl font-bold">Baper <span class="text-blue-700">Bank</span></h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="card bg-primary text-primary-content">
+                    <div class="card-body">
+                        <div id="deposit" class="space-y-3">
+                            <h3 class="text-3xl text-white">Deposit</h3>
+                            <h4 class="text-2xl">$ <span id="deposit-money">00</span></h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-slate-600 text-primary-content">
+                    <div class="card-body">
+                        <div id="withdraw" class="space-y-3">
+                            <h3 class="text-3xl text-white">Withdraw</h3>
+                            <h4 class="text-2xl">$ <span id="withdraw-money">00</span></h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-orange-700 text-primary-content">
+                    <div class="card-body">
+                        <div id="balance" class="space-y-3">
+                            <h3 class="text-3xl text-white">Balance</h3>
+                            <h4 class="text-2xl">$ <span id="current-balance">1260</span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="money-transaction" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="card bg-stone-900 text-primary-content">
+                    <div class="card-body">
+                        <div id="" class="space-y-3">
+                            <h3 class="card-title text-white text-2xl">Deposite Money</h3>
+                            <input type="number" class="input" id="money-input" placeholder="Type your amount">
+                            <button class="btn" id="money-input-btn">Deposit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-stone-900 text-primary-content">
+                    <div class="card-body">
+                        <div id="" class="space-y-3">
+                            <h3 class="card-title text-white text-2xl">Withdraw Money</h3>
+                            <input type="number" class="input" id="money-output" placeholder="Type your amount">
+                            <button class="btn" id="money-output-btn">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ERROR MODAL -->
+        <section>
+
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                <!-- <button class="btn" onclick="depositeError.showModal()">open modal</button> -->
+                <dialog id="depositeError" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box text-center">
+                    <h3 class="font-bold text-lg">Warning!</h3>
+                    <p class="py-4">You cannot <b>Deposit</b> less than $0</p>
+                    <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    </div>
+                </form>
+                </dialog>
+            </div>
+
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                <!-- <button class="btn" onclick="withdrawError.showModal()">open modal</button> -->
+                <dialog id="withdrawError" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box text-center">
+                    <h3 class="font-bold text-lg">Warning!</h3>
+                    <p class="py-4">You cannot <b>Withdraw</b> $10 or less than $10 money</p>
+                    <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    </div>
+                </form>
+                </dialog>
+            </div>
+
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                <!-- <button class="btn" onclick="outOfAmount.showModal()">open modal</button> -->
+                <dialog id="outOfAmount" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box text-center">
+                    <h3 class="font-bold text-lg">Warning!</h3>
+                    <p class="py-4">You cannot <b>withdraw</b> more than your current balance</p>
+                    <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    </div>
+                </form>
+                </dialog>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
