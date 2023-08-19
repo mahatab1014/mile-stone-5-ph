@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 90%;
+    margin: auto;
+}
+span{
+    color: #252525;
+}
+img{
+    max-width: 100%;
+}
+header > nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 12px #d8d9dd;
+    margin-top: 20px;
+}
+.primary-button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border-width: 3px;
+    background-color: #000000a6;
+    color: white;
+    transition: all 200ms;
+}
+.primary-button:active{
+    transform: scale(0.95);
+}
+
+/* Area Calculation */
+.section-titles h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 30px 0;
+}
+
+.area-calculation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#calculation-entry{
+    padding: 20px 30px;
+    width: 50%;
+    margin: auto;
+}
+.card{
+    background-color: aliceblue;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 2px 12px #d8d9dd31; 
+}
+.card-body{
+    padding: 10px 0;
+}
+.card-body > div{
+    padding: 10px 0;
+}
+.card-body-text h3{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+.card-body .input-field{
+    display: flex;
+    justify-content: center;
+}
+.card-body .input-field > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card-body .input-field input{
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px #ff77ff57;
+}
+.calculation-output h4{
+    font-size: 1.5rem;
+    padding: 20px 0;
+}
+@media screen and (max-width: 992px) {
+    .area-calculation{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 568px) {
+    .area-calculation{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    #calculation-entry{
+        padding: 20px 30px;
+        width: 100%;
+        margin: auto;
+    }
+    .card-body .input-field{
+        display: block;
+    }
+    .card-body .input-field > div:first-child{
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+
+    <!-- <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <div class="nav-left">
+          <a href="">
+            <h2>Interactive</h2>
+            <h3>Geometry Genius</h3>
+          </a>
+        </div>
+        <div class="nav-right">
+          <button class="primary-button">Blog</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+
+
+      <section>
+        <div class="section-titles">
+          <h2>Area Calculation History</h2>
+        </div>
+        <div id="calculation-entry"></div>
+        <div class="area-calculation">
+
+          <div class="card">
+            <div class="card-img">
+              <img src="images/triangle.png" alt="triangle">
+            </div>
+            <div class="card-body">
+
+              <div class="card-body-text">
+                <h3>Triangle</h3>
+                <p>Area (A) = 0.5 X b X h</p>
+              </div>
+
+              <div class="input-field">
+                <div>
+                  <input type="number" name="" placeholder="Base" id="triangle-base">
+                  <span>c.m.</span>
+                </div>
+                <div>
+                  <input type="number" name="" placeholder="Hight" id="triangle-hight">
+                  <span>c.m.</span>
+                </div>
+              </div>
+
+              <div class="calculation-output">
+                <h4>Area : <span id="triangle-calculation-output">0</span> c.m<sup>2</sup></h4>
+              </div>
+
+              <button class="primary-button" id="triangle-btn" onclick="triangleCalculation()">Calculate</button>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="images/rectangle.png" alt="triangle">
+            </div>
+            <div class="card-body">
+
+              <div class="card-body-text">
+                <h3>Rectangle</h3>
+                <p>Area (A) = w X l</p>
+              </div>
+
+              <div class="input-field">
+                <div>
+                  <input type="number" name="" placeholder="Width" id="rectangle-w">
+                  <span>c.m.</span>
+                </div>
+                <div>
+                  <input type="number" name="" placeholder="Length" id="rectangle-l">
+                  <span>c.m.</span>
+                </div>
+              </div>
+
+              <div class="calculation-output">
+                <h4>Area : <span id="rectangle-calculation-output">0</span> c.m<sup>2</sup></h4>
+              </div>
+
+              <button class="primary-button" onclick="rectangleCalculation()">Calculate</button>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="images/parallelogram.png" alt="parallelogram">
+            </div>
+            <div class="card-body">
+
+              <div class="card-body-text">
+                <h3>Parallelogram</h3>
+                <p>Area (A) = b X h</p>
+                <p>b=10cm, h=12cm</p>
+              </div>
+
+              <div class="input-field">
+                <div>
+                  <input type="number" name="" placeholder="Base" id="parallelogram-base">
+                  <span>c.m.</span>
+                </div>
+                <div>
+                  <input type="number" name="" placeholder="Hight" id="parallelogram-hight">
+                  <span>c.m.</span>
+                </div>
+              </div>
+
+              <div class="calculation-output">
+                <h4>Area : <span id="parallelogram-calculation-output">0</span> c.m<sup>2</sup></h4>
+              </div>
+
+              <button class="primary-button" onclick="parallelogramCalculation()">Calculate</button>
+
+            </div>
+          </div>
+
+ 
+
+
+
+        </div>
+      </section>
+
+
+
+
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
