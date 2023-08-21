@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Sale</title>
+
+    <!-- FavIcon -->
+    <link
+      rel="shortcut icon"
+      href="./images/summer-sale.png"
+      type="image/x-icon"
+    />
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./stylesheet/font.css" />
+
+    <!-- Tailwind & DaisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./javascript/tailwind-config.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fbcff7765f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <!-- Banner -->
+      <section class="bg-amber-50">
+        <div class="hero min-h-screen">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img src="./images/summer-sale.png" class="w-3/4 sm:w-2/4" />
+            <div class="text-center space-y-5">
+              <h4 class="text-xl font-medium">---SALE FEVER---</h4>
+              <h1 class="text-3xl md:text-5xl font-bold text-slate-950">
+                Purchase TK 200 or <br />
+                above & get <span class="text-primary-color">20% off</span>
+              </h1>
+
+              <div class="flex items-center justify-center gap-5">
+                <p class="py-6" class="tooltip" data-tip="hello">
+                  Use Promo Code
+                </p>
+                <div class="tooltip inline-block" data-tip="Click To Copy">
+                  <button
+                    onclick="copyPromoCode(this)"
+                    class="btn btn-sm bg-primary-color hover:bg-primary-color text-white"
+                  >
+                    SELL200
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop -->
+      <section class="container m-auto py-10">
+        <div
+          class="flex gap-5 px-5 flex-wrap md:flex-nowrap flex-col md:flex-row"
+        >
+          <div class="w-auto md:w-9/12 product-container space-y-8">
+            <!-- Kitchenware Section -->
+            <div class="">
+              <div class="mb-4">
+                <h2 class="text-2xl font-medium">Kitchenware</h2>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod1.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">K. Accessories</h2>
+                    <p class="text-lg text-gray-600">39.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod2.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Cutting Board</h2>
+                    <p class="text-lg text-gray-600">25.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod3.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Home Cooker</h2>
+                    <p class="text-lg text-gray-600">49.00 TK</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sportswear Section -->
+            <div class="">
+              <div class="mb-4">
+                <h2 class="text-2xl font-medium">Sportswear</h2>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod4.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Sports Back Cap</h2>
+                    <p class="text-lg text-gray-600">49.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod5.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Full Jersey Set</h2>
+                    <p class="text-lg text-gray-600">69.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod6.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Sports cates</h2>
+                    <p class="text-lg text-gray-600">159.00 TK</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Furniture Section -->
+            <div class="">
+              <div class="mb-4">
+                <h2 class="text-2xl font-medium">Furniture</h2>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod7.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">
+                      Single Relax Chair
+                    </h2>
+                    <p class="text-lg text-gray-600">185.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod8.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Children play</h2>
+                    <p class="text-lg text-gray-600">299.00 TK</p>
+                  </div>
+                </div>
+
+                <div
+                  onclick="productItemClick(this)"
+                  class="card card-compact bg-base-100 shadow-xl p-2 cursor-pointer"
+                >
+                  <figure class="bg-gray-100 py-5">
+                    <img src="./images/prod9.png" alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <div class="rating text-amber-400 justify-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h2 class="card-title justify-center">Flexible Sofa</h2>
+                    <p class="text-lg text-gray-600">339.00 TK</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-item w-auto md:w-1/4 space-y-5">
+            <div class="card card-compact bg-base-100 shadow-xl mt-10">
+              <div class="card-body">
+                <h2 class="card-title">Have coupon?</h2>
+
+                <div
+                  class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 xl:space-x-4"
+                >
+                  <input
+                    id="promo-code"
+                    type="text"
+                    name="Search"
+                    placeholder="Coupon Code"
+                    class="p-2 text-sm rounded-md w-auto focus:outline-none border"
+                  />
+                  <button
+                    id="promo-apply"
+                    type="button"
+                    class="btn p-2 px-5 rounded-md font-medium bg-primary-color hover:bg-primary-color text-white cursor-pointer active:scale-95 transition-all"
+                    disabled
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-compact bg-base-100 shadow-xl">
+              <div class="card-body">
+                <ol
+                  id="cart-container"
+                  class="text-base lg:text-lg font-medium list-inside"
+                >
+                  <!-- Selected Cart Item -->
+                </ol>
+                <hr />
+                <ul
+                  id=""
+                  class="text-base lg:text-lg font-medium"
+                >
+                  <li>
+                    Total :
+                    <span id="items-price-total" class="text-gray-400">00</span>
+                    TK
+                  </li>
+                  <li>
+                    Discount :
+                    <span id="discount-price" class="text-gray-400">00</span> TK
+                  </li>
+                  <li>
+                    Total Price :
+                    <span id="total-price" class="text-gray-400">00</span> TK
+                  </li>
+                </ul>
+                <hr />
+                <button
+                  id="purchase-button"
+                  class="btn bg-primary-color hover:bg-primary-color text-white"
+                  disabled
+                >
+                  Make Purchase
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="modal-1">
+          <!-- Open the modal using ID.showModal() method -->
+          <!-- <button class="btn" onclick="make_purchase.showModal()">open modal</button> -->
+          <dialog id="make_purchase" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box text-center">
+              <div class="flex justify-center">
+                <img src="images/congo.png" alt="" srcset="" />
+              </div>
+              <h3 class="font-bold text-2xl md:text-4xl">Congratulations</h3>
+              <p class="py-4">Your product purchase process done. You will get your product within 72 hours.</p>
+              <button
+                onclick="location.reload()"
+                class="p-2 px-5 rounded-md font-medium bg-primary-color text-white cursor-pointer active:scale-95 transition-all"
+              >
+                Go Home
+              </button>
+            </form>
+          </dialog>
+        </div>
+      </section>
+    </main>
+
+    <script src="javascript/app.js"></script>
+  </body>
+</html>
