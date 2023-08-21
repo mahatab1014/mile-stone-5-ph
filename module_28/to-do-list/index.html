@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+    
+
+
+    <main class="bg-amber-200 h-screen">
+
+        <section class="py-16 container mx-auto">
+
+            <div class="create-todo-list space-y-5">
+                <h2 class="text-3xl font-semibold text-center">My ToDo List</h2>
+                <div class="text-center px-5">
+                    <input type="text" placeholder="Title of To Do" id="todo-title" class="input input-sm w-full mb-3 md:w-1/2 md:mb-0 mx-auto">
+                    <button onclick="addToDoList(this)" class="btn btn-sm px-5 bg-purple-600 hover:bg-purple-700 text-white">Add</button>
+                </div>
+            </div>
+
+            <div class="todo-list w-auto px-5 md:w-3/5 mx-auto mt-5">
+
+                <ul id="todo-container" class="space-y-2 text-lg font-medium text-slate-600">
+                    <li>Nothing</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+    <script src="main.js"></script>
+  </body>
+</html>

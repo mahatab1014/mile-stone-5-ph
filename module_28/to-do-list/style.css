@@ -1,0 +1,10 @@
+ul li {
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    background: #ffffff;
+    border-radius: 15px;
+}
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #d6d6d6;
+}
