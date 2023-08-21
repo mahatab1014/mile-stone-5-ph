@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mile Stone 5</title>
+
+    <!-- THIS ICON FOR MOUDLE  -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body>
+    
+
+    <main>
+
+        <section class="container m-auto">
+
+            <div class="section-titles py-6">
+                <h2 class="text-4xl text-center font-semibold">Money Master 💰</h2>
+            </div>
+
+            <div class="money-calculation-container grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <div class="order-2">
+                    <img class="" src="money.jpg" alt="">
+                </div>
+
+                <div class="order-1 bg-amber-100 p-10 space-y-5">
+
+                    <div class="grid gap-4 text-center">
+
+                        <h2 class="font-semibold text-2xl">Income</h2>
+
+                        <label for="income" class="text-lg font-medium">
+                            Income:
+                            <input type="number" placeholder="Type income amount" id="income" class="p-2 outline-none rounded-lg pl-4 text-base">
+                        </label>
+                    </div>
+
+                    <div class="grid gap-4 text-center">
+
+                        <h2 class="font-semibold text-2xl">Expenses</h2>
+
+                        <label for="food" class="text-lg font-medium">
+                            Food:
+                            <input type="number" placeholder="Type amount" id="food" class="p-2 outline-none rounded-lg pl-4 text-base">
+                        </label>
+                        <label for="rent" class="text-lg font-medium">
+                            Rent:
+                            <input type="number" placeholder="Type amount" id="rent" class="p-2 outline-none rounded-lg pl-4 text-base">
+                        </label>
+                        <label for="clothes" class="text-lg font-medium">
+                            Clothes:
+                            <input type="number" placeholder="Type amount" id="clothes" class="p-2 outline-none rounded-lg pl-4 text-base">
+                        </label>
+                        <button onclick="calculate(this)" class="btn btn-primary text-white w-2/6 m-auto">Calculate</button>
+                    </div>
+                    <div class="grid gap-4 text-center">
+
+                        <h2 class="font-semibold text-2xl">Total Expenses: <span id="expenses">00</span></h2>
+                        <h2 class="font-semibold text-2xl">Balance: <span id="balance">00</span></h2>
+
+                    </div>
+
+
+                    <div class="grid gap-4 text-center">
+
+                        <div class="grid grid-cols-2">
+                            <label for="save" class="text-lg font-medium">
+                                <span>Save:</span>
+                                <input type="number" placeholder="Type percentage" id="save" class="p-2 outline-none rounded-lg pl-4 text-base">
+                            </label>
+                            <button onclick="saveAmount()" class="btn btn-primary btn-sm text-white w-2/6 m-auto">Save</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
