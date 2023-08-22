@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW DATE</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9248/9248278.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+    <main class="h-screen bg-amber-200 py-5">
+
+        <section class="container m-auto">
+
+            <div class="section-titles text-center space-y-5">
+                <h2 class="text-3xl font-semibold">DATE With JavaScript</h2>
+                <button onclick="refresh()" class="btn btn-primary text-white">Refresh</button>
+            </div>
+            <!-- Date -->
+            <div class="text-xl font-medium">
+
+                <h4>Today Date : <span id="today-date"></span></h4>
+                <h4>Current Time : <span id="current-time"></span></h4>
+
+            </div>
+            
+
+        </section>
+
+    </main>
+    
+
+
+    <script src="date.js"></script>
+</body>
+</html>
